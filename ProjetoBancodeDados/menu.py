@@ -49,6 +49,7 @@ def menu(id_usuario, tipo_usuario):
             print("8. Adicionar recomendação")
             print("9. Listar recomendações")
             print("10. Excluir recomendação")
+            print("11. Deletar conta")
 
         print("0. Logout")
 
@@ -112,6 +113,8 @@ def menu(id_usuario, tipo_usuario):
                 listarRecomendacoes()
             elif opcao == "10":
                 excluirRecomendacao(id_usuario)
+            elif opcao == "11":
+                excluirUsuario(id_usuario)
             elif opcao == "0":
                 print("Saindo do menu e voltando para o login...")
                 break
