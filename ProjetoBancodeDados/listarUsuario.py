@@ -9,11 +9,10 @@ def listarUsuarios():
 
     try:
         conexao = mysql.connector.connect(
-            host="localhost",
             user="root",
             password="luiz123",
-            port="",
-            database="cineflix"
+            host="localhost",
+            unix_socket="/data/data/com.termux/files/usr/var/run/mysqld.sock"
         )
 
         cursor = conexao.cursor()
