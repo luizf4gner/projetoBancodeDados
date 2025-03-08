@@ -35,12 +35,11 @@ def login():
 
         try:
             conexao = mysql.connector.connect(
-                host ="localhost",
-                user="root",
-                password="luiz123",
-                port="",
-                database="cineflix"
-            )
+            user="root",
+            password="luiz123",
+            host="localhost",
+            unix_socket="/data/data/com.termux/files/usr/var/run/mysqld.sock"
+        )
             cursor = conexao.cursor()
 
             comando = "select id, tipo from usuarios where username = %s and senha = %s"
