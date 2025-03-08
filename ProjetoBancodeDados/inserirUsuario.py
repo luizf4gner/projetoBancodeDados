@@ -41,11 +41,10 @@ def inserirUsuario(tipo_usuario_logado="usuario"):
 
     try:
         conexao = mysql.connector.connect(
-            host="localhost",
             user="root",
-            password="",
-            port="3307",
-            database="cineflix"
+            password="luiz123",
+            host="localhost",
+            unix_socket="/data/data/com.termux/files/usr/var/run/mysqld.sock"
         )
         cursor = conexao.cursor()
         cursor.execute(comando, valores)
