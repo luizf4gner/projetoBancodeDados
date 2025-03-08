@@ -11,8 +11,8 @@ def listarUsuarios():
         conexao = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="",
-            port="3307",
+            password="luiz123",
+            port="",
             database="cineflix"
         )
 
